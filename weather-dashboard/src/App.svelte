@@ -38,7 +38,7 @@ const getUserLocation = () => {
 const fetchWeather = async () => {
   try {
     const res = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`
+      `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`
     );
     if (!res.ok) {
       throw new Error('Could not fetch weather data');
@@ -52,7 +52,7 @@ const fetchWeather = async () => {
 const fetchForecastedWeather = async () => {
     try {
       const res = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5&aqi=no&alerts=no`
       );
       if (!res.ok) {
         throw new Error('Could not fetch weather data');
